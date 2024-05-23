@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
-    "dev": "node --watch src/index.js"
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "build": "pnpm install --prod"
   },
   "author": "",
   "license": "ISC",
