@@ -7,6 +7,23 @@ app.get("/", (_, res) => {
 });
 
 // sending GET request to get subscribers list
+/**
+ * @swagger
+ * '/subscribers':
+ *  get:
+ *     tags:
+ *     - Subscribers
+ *     summary: Get all subscribers
+ *     responses:
+ *      200:
+ *        description: Fetched Successfully
+ *      400:
+ *        description: Bad Request
+ *      404:
+ *        description: Not Found
+ *      500:
+ *        description: Server Error
+ */
 app.get("/subscribers", async (_, res) => {
   try {
     // get all the subscribers from the database and exclude the __v field
@@ -22,6 +39,23 @@ app.get("/subscribers", async (_, res) => {
 });
 
 // sending GET request at the path "/subscribers/name"
+/**
+ * @swagger
+ * '/subscribers/names':
+ *  get:
+ *     tags:
+ *     - Subscribers
+ *     summary: Get all subscribers
+ *     responses:
+ *      200:
+ *        description: Fetched Successfully
+ *      400:
+ *        description: Bad Request
+ *      404:
+ *        description: Not Found
+ *      500:
+ *        description: Server Error
+ */
 app.get("/subscribers/names", async (_, res) => {
   try {
     // To retrieve a list of subscribers
@@ -40,6 +74,26 @@ app.get("/subscribers/names", async (_, res) => {
 });
 
 //sending GET request to fetch data as per id
+/**
+ * @swagger
+ * '/subscribers/{id}':
+ *  get:
+ *     parameters:
+ *     - name: id
+ *       in: path
+ *     tags:
+ *     - Subscribers
+ *     summary: Get all subscribers
+ *     responses:
+ *      200:
+ *        description: Fetched Successfully
+ *      400:
+ *        description: Bad Request
+ *      404:
+ *        description: Not Found
+ *      500:
+ *        description: Server Error
+ */
 app.get("/subscribers/:id", async (req, res) => {
   try {
     let id = req.params.id;
