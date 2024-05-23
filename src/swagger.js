@@ -18,7 +18,11 @@ const options = {
     servers: [
       {
         url: "http://localhost:3000/",
-        description: "Local server",
+        description: "Local Server",
+      },
+      {
+        url: "https://youtube-subscriber-api.onrender.com/",
+        description: "Live Server",
       },
     ],
   },
